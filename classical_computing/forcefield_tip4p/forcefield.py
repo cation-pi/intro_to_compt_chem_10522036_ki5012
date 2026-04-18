@@ -13,13 +13,13 @@ def lj_potential(r, sigma, epsilon):
     sr12 = sr6 ** 2
     return 4 * epsilon * (sr12 - sr6)
 
-def lj_lb(atom_i, atom_j):
+def lj_lb(r, atom_i, atom_j):
     sigma = (atom_i.sigma + atom_j.sigma) / 2
     epsilon = np.sqrt(atom_i.epsilon * atom_j.epsilon)
     return lj_potential(r, sigma, epsilon)
 
 # coulomb energy
-def coulomb_energy(r, atom_i, atom_j):
+def coulomb_energy(r, q_i, q_j):
     return k_e * (q_i * q_j) / (r + 1e-12)
 
 # total energy
@@ -44,5 +44,5 @@ def compute_total_energy(Box):
                         E_total += coulomb_energy(atom_i.charge, atom_j.charge, r)
 
                     if atom_i.name == "O" and atom_j.name == "O":
-                        E_total += lj_lb(atom_i, atom_j)
+                        E_total += lj_lb(r, atom_i, atom_j)
     return E_total

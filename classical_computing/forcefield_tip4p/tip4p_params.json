@@ -1,66 +1,67 @@
 {
   "metadata": {
-    "model_name": "TIP",
-    "variant": "4P",
-    "source_paper": ["Jorgensen et al. (1983)", "Dick & Madura (2005)"],
-    "notes": "",
+    "model_name": "TIP4P",
+    "variant": "rigid",
+    "source_paper": ["Jorgensen et al. (1983)", "Dick & Madura (2005)", "https://docs.lammps.org/Howto_tip4p.html"],
     "units": {
-      "distance": "",
-      "energy": "",
-      "charge": "",
-      "angle": ""
+      "distance": "Angstrom",
+      "energy": "kcal/mol",
+      "charge": "e",
+      "angle": "degrees",
+      "sigma": "Angstrom",
+      "epsilon": "kcal/mol"
     }
   },
 
   "interaction_parameters": {
-    "oxygen": {
-      "charge": "",
-      "sigma": "",
-      "epsilon": ""
+    "O": {
+      "charge": 0.0,
+      "sigma": 3.15365,
+      "epsilon": 0.1550
     },
 
-    "hydrogen": {
-      "charge": "",
-      "sigma": "",
-      "epsilon": ""
+    "H": {
+      "charge": 0.52,
+      "sigma": 0.0,
+      "epsilon": 0.0
     },
 
-    "dummy_M": {
-      "charge": "",
-      "sigma": "",
-      "epsilon": ""
+    "M": {
+      "charge": -1.04,
+      "sigma": 0.0,
+      "epsilon": 0.0
     }
   },
 
   "geometry_parameters": {
-    "bond_length_OH": "",
-    "angle_HOH": "",
-    "distance_OM": ""
+    "bond_length_OH": 0.9572,
+    "angle_HOH": 104.52,
+    "distance_OM": 0.15
   },
 
   "reference_coordinates": {
-    "oxygen": {
-      "x": "",
-      "y": "",
-      "z": ""
+    "O": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
     },
 
-    "hydrogen_1": {
-      "x": "",
-      "y": "",
-      "z": ""
+    "H1": {
+      "x": 0.5859,
+      "y": 0.7570,
+      "z": 0.0
     },
 
-    "hydrogen_2": {
-      "x": "",
-      "y": "",
-      "z": ""
+    "H2": {
+      "x": 0.5859,
+      "y": -0.7570,
+      "z": 0.0
     },
 
-    "dummy_M": {
-      "x": "",
-      "y": "",
-      "z": ""
+    "M": {
+      "x": 0.1500,
+      "y": 0.0,
+      "z": 0.0
     }
   }
 }
