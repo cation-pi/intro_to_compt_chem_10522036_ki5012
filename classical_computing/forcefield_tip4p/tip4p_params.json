@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "model_name": "TIP",
+    "variant": "4P",
+    "source_paper": ["Jorgensen et al. (1983)", "Dick & Madura (2005)"],
+    "notes": "",
+    "units": {
+      "distance": "",
+      "energy": "",
+      "charge": "",
+      "angle": ""
+    }
+  },
+
+  "interaction_parameters": {
+    "oxygen": {
+      "charge": "",
+      "sigma": "",
+      "epsilon": ""
+    },
+
+    "hydrogen": {
+      "charge": "",
+      "sigma": "",
+      "epsilon": ""
+    },
+
+    "dummy_M": {
+      "charge": "",
+      "sigma": "",
+      "epsilon": ""
+    }
+  },
+
+  "geometry_parameters": {
+    "bond_length_OH": "",
+    "angle_HOH": "",
+    "distance_OM": ""
+  },
+
+  "reference_coordinates": {
+    "oxygen": {
+      "x": "",
+      "y": "",
+      "z": ""
+    },
+
+    "hydrogen_1": {
+      "x": "",
+      "y": "",
+      "z": ""
+    },
+
+    "hydrogen_2": {
+      "x": "",
+      "y": "",
+      "z": ""
+    },
+
+    "dummy_M": {
+      "x": "",
+      "y": "",
+      "z": ""
+    }
+  }
+}
