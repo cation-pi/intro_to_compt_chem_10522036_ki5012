@@ -1,0 +1,23 @@
+{
+  "system_name": "demo",
+  "forcefield": {
+    "water": "tip4p_params.json"
+  },
+  "box": {
+    "type": "cubic",
+    "length": 25.0
+  },
+  "components": [
+    {
+      "molecule": "water",
+      "count": 27,
+      "placement": {
+        "method": "grid",
+        "nx": 3,
+        "ny": 3,
+        "nz": 3,
+        "spacing": 3.0
+      }
+    }
+  ]
+}

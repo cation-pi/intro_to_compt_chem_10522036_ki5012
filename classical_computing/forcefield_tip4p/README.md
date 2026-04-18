@@ -1,7 +1,9 @@
 # implementasi simple force field dari nol untuk TIP4P
 
 ## tujuan
-membangun simple molecular mechanics force field untuk H2O (model TIP4P) dari nol menggunakan python
+1. membangun simple molecular mechanics force field untuk H2O (model TIP4P) dari nol menggunakan python
+2. mempelajari molecular simulation engine dan software design secara garis kasar(?)
+3. 
 
 ## struktur direktori
 .  
@@ -56,3 +58,5 @@ constants:
 3. Jorgensen, W.L. et al. (1983) 'Comparison of simple potential functions for simulating liquid water,' *The Journal of Chemical Physics*, 79(2), pp. 926–935. https://doi.org/10.1063/1.445869.
 4. Dick, T.J. and Madura, J.D. (2005) 'Chapter 5 A review of the TIP4P, TIP4P-EW, TIP5P, and TIP5P-E water models,' *Annual Reports in Computational Chemistry*, pp. 59–74. https://doi.org/10.1016/s1574-1400(05)01005-4.
 5. LAMMPS. *10.4.6. TIP4P and OPC water models*. Tersedia di: https://docs.lammps.org/Howto_tip4p.html.
+6. https://pythoninchemistry.org/sim_and_scat/parameterisation/mixing_rules 
+7. https://wenku.csdn.net/answer/1evu4r5g80 

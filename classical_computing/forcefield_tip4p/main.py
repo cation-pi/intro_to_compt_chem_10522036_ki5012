@@ -3,9 +3,12 @@ import json
 from molecule import Atom, Molecule, Box
 from forcefield import compute_total_energy
 
-with open("tip4p_params.json", "r") as f: 
-    params = json.load(f)
-print(params)
+def load_json(filename):
+    with open(filename, "r") as f:
+        return json.load(f)
+
+def get_xyz(ref, key):
+    return np.array([ref[key]["x"],ref[key]["y"],ref[key]["z"]], dtype=float)
 
 def build_water(params, offset_pos): 
     offset = np.array(offset_pos, dtype=float)
@@ -14,32 +17,38 @@ def build_water(params, offset_pos):
     ref = params["reference_coordinates"]
 
     O = Atom(
-        "O", np.array([ref["O"]["x"],ref["O"]["y"],ref["O"]["z"]]) + offset
-        ip["O"]["charge"],
-        ip["O"]["sigma"],
-        ip["O"]["epsilon"]
+        name="O", 
+        position=get_xyz(ref, "O") + offset,
+        charge=ip["O"]["charge"],
+        sigma=ip["O"]["sigma"],
+        epsilon=ip["O"]["epsilon"]
     )
 
     H1 = Atom(
-        "H1", np.array([ref["H1"]["x"],ref["H1"]["y"],ref["H1"]["z"]]) + offset
-        ip["H"]["charge"],
-        ip["H"]["sigma"],
-        ip["H"]["epsilon"]
+        name="H1", 
+        position=get_xyz(ref, "H1") + offset,
+        charge=ip["H"]["charge"],
+        sigma=ip["H"]["sigma"],
+        epsilon=ip["H"]["epsilon"]
     )
 
     H2 = Atom(
-        "H2", np.array([ref["H2"]["x"],ref["H2"]["y"],ref["H2"]["z"]]) + offset
-        ip["H"]["charge"],
-        ip["H"]["sigma"],
-        ip["H"]["epsilon"]
+        name="H2", 
+        position=get_xyz(ref, "H2") + offset,
+        charge=ip["H"]["charge"],
+        sigma=ip["H"]["sigma"],
+        epsilon=ip["H"]["epsilon"]
     )
 
+
     M = Atom(
-        "M", np.array([ref["M"]["x"],ref["M"]["y"],ref["M"]["z"]]) + offset
-        ip["M"]["charge"],
-        ip["M"]["sigma"],
-        ip["M"]["epsilon"]
+        name="M", 
+        position=get_xyz(ref, "M") + offset,
+        charge=ip["M"]["charge"],
+        sigma=ip["M"]["sigma"],
+        epsilon=ip["M"]["epsilon"]
     )
 
     return Molecule([O, H1, H2, M], name="H2O")
 
+if __name__ == "__main__":
